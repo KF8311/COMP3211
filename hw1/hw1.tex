@@ -1,0 +1,265 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Packages
+\documentclass[10pt, a4paper]{article}
+\usepackage[top=3cm, bottom=4cm, left=3.5cm, right=3.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd, fancyhdr, color, comment, graphicx, environ}
+\usepackage{float}
+\DeclareMathAlphabet{\mathscr}{U}{rsfs}{m}{n}
+\usepackage[math-style=ISO]{unicode-math}
+\setmathfont{TeX Gyre Termes Math}
+\usepackage{lastpage}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{sectsty}
+\usepackage{thmtools}
+\usepackage{shadethm}
+\usepackage{hyperref}
+\usepackage{setspace}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Environment setup
+\mdfsetup{skipabove=\topskip,skipbelow=\topskip}
+% \newrobustcmd\ExampleText{%An \textit{inhomogeneous linear} differential equation has the form
+% \begin{align}
+% L[v ] = f,
+% \end{align}
+% where $L$ is a linear differential operator, $v$ is the dependent
+% variable, and $f$ is a given non−zero function of the independent
+% variables alone.
+% }
+\mdfdefinestyle{theoremstyle}{%
+linecolor=black,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=gray!20,
+innertopmargin=\topskip,
+}
+\newmdtheoremenv[style=theoremstyle]{Problem}{Problem}
+\newenvironment{Solution}{\textbf{Solution.}}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fill in the appropriate information below
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}     
+\newcommand\course{COMP3211}                            % <-- course name   
+\newcommand\hwnumber{ 1}                                 % <-- homework number
+\newcommand\Information{LAM, Pak Ho}                        % <-- personal information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Page setup
+\pagestyle{fancy}
+\headheight 35pt
+\lhead{\today}
+\rhead{\includegraphics[width=2.5cm]{../img/logo-hkust.png}}
+\lfoot{}
+\pagenumbering{arabic}
+\cfoot{\small\thepage}
+\rfoot{}
+\headsep 1.2em
+\renewcommand{\baselinestretch}{1.25}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Add new commands here
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\PP}{\mathbb P}
+\DeclareMathOperator{\Mod}{Mod} 
+\renewcommand\lstlistingname{Algorithm}
+\renewcommand\lstlistlistingname{Algorithms}
+\def\lstlistingautorefname{Alg.}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem{case}{Case}
+\newcommand{\assign}{:=}
+\newcommand{\infixiff}{\text{ iff }}
+\newcommand{\nobracket}{}
+\newcommand{\backassign}{=:}
+\newcommand{\tmmathbf}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\tmop}[1]{\ensuremath{\operatorname{#1}}}
+\newcommand{\tmtextbf}[1]{\text{{\bfseries{#1}}}}
+\newcommand{\tmtextit}[1]{\text{{\itshape{#1}}}}
+
+\newenvironment{itemizedot}{\begin{itemize} \renewcommand{\labelitemi}{$\bullet$}\renewcommand{\labelitemii}{$\bullet$}\renewcommand{\labelitemiii}{$\bullet$}\renewcommand{\labelitemiv}{$\bullet$}}{\end{itemize}}
+\catcode`\<=\active \def<{
+\fontencoding{T1}\selectfont\symbol{60}\fontencoding{\encodingdefault}}
+\catcode`\>=\active \def>{
+\fontencoding{T1}\selectfont\symbol{62}\fontencoding{\encodingdefault}}
+\catcode`\<=\active \def<{
+\fontencoding{T1}\selectfont\symbol{60}\fontencoding{\encodingdefault}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Begin now!
+
+
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{3cm}
+
+        \Huge
+        \textbf{COMP3211}
+
+        \vspace{1cm}
+        \huge
+        Homework\hwnumber
+
+        \vspace{1.5cm}
+        \Large
+
+        \textbf{\Information}                      % <-- author
+
+
+        \vfill
+
+        A \course \ Written Assignment
+
+        \vspace{1cm}
+
+        \includegraphics[width=0.4\textwidth]{../img/logo-hkust.png}
+        \\
+
+        \Large
+
+        \today
+
+    \end{center}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Start the assignment now
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%New problem
+\newpage
+\begingroup\huge{\textbf{Question 1}}
+\endgroup \\
+1.1. No, we have the 4 sensors
+of $s_2, s_4, s_6, s_8$, and such agent can be designed as
+\begin{flalign*}
+    s_2 \bar{s_4} & \rightarrow \text{east}  \\
+    s_4 \bar{s_6} & \rightarrow \text{south} \\
+    s_6 \bar{s_8} & \rightarrow \text{west}  \\
+    s_8 \bar{s_2} & \rightarrow \text{north} \\
+    1             & \rightarrow \text{north}
+\end{flalign*}
+When there is a wall above the robot and the east side is cleared,
+we will move east. When there is a wall in the east side and the south side is cleared,
+we will move south.
+When there is a wall in the south side and the west side is cleared,
+we will move west.
+When there is a wall in the west side and the north side is cleared,
+we will move north. And if theres no wall around we are default to
+move the robot to north.
+However, this rule set fails because there exist position where the local pattern $s_2, s_4, s_6, s_8$
+is equal but the actual action should be different. Consider a case
+such that the robot walk around the inner obstacle, when it walk
+through the corners all sensors will return 0. Since in the actual
+case only $s_1$, $s_3$, $s_5$ or $s_7$ is 1, in the local sensors,
+all these position is returned as all 0. A memoryless agent seeing (0,0,0,0)
+at all corners must pick the same action (north),
+which works at one corner but fails at the other three. So all positon will lead
+to the action North, however, if we want to make the robot
+follow the rectangle outer boundary located in the middle of the map,
+they should perform east, west, south or north respectively,
+so the local sensors cannot distinguish these positions. \\
+
+1.2 We cannot "compute" $s_7$ out. Normally,
+with memory we can set $w_7  = 1$ iff in the previous step $w_8=1$
+and the robot move north previously. We have the design
+\begin{flalign*}
+    s_2 \bar{s_4} & \rightarrow \text{east}  \\
+    s_4 \bar{s_6} & \rightarrow \text{south} \\
+    s_6 \bar{s_8} & \rightarrow \text{west}  \\
+    s_8 \bar{s_2} & \rightarrow \text{north} \\
+    w_3           & \rightarrow \text{east}  \\
+    w_5           & \rightarrow \text{south} \\
+    w_7           & \rightarrow \text{west}  \\
+    w_1           & \rightarrow \text{north} \\
+    1             & \rightarrow \text{north}
+\end{flalign*}
+With:
+\begin{itemize}
+    \item $w_1 = 1$ \quad iff at the previous time step, $w_2 = 1$, and the robot moved east;
+    \item $w_3 = 1$ \quad iff at the previous time step, $w_4 = 1$, and the robot moved south;
+    \item $w_5 = 1$ \quad iff at the previous time step, $w_6 = 1$, and the robot moved west;
+    \item $w_7 = 1$ \quad iff at the previous time step, $w_8 = 1$, and the robot moved north.
+\end{itemize}
+However, notice that this robot moves in clockwise way in outer boundary,
+such that when we approach the southeast corner, such that $s_5$ is true.
+But, in the actual case if the outer boundary is a simple rectangle,
+$s_3$, $s_5$ and $s_7$  are all 1, which is different from what we predict.
+The $w_7$ we are predicting are only used for tracking the outer boundary,
+so that when we reach the southwest corner we will go north, which does
+not computer $s_7$ in any situations.
+
+\newpage
+\begingroup\huge{\textbf{Question 2}}
+\endgroup \\
+2.1. Consider all possible cases:
+We notices that when $x_3$ is 1 as long as $x_2$ is 0 then
+the TLU will reach a value of 3 or above regardless of other input,
+which give us the first term $x_3 \land \bar{x_2}$
+and when $x_3$ is 1 or any of $x_1$ or $x_4$ is 1, then it will also be
+more than 3 regardless of values of $x_2$ and $x_5$ (even both of them are 1)
+the value computed is more than 3. Which give us the second term $x_3\land(x_1 \lor x_4)$.
+Lastly, when only $x_1$ and $x_4$ is 1, $x_5$ is acceptable to be 1
+since its value is larger than 3 but $x_2$ must not be 1 as it will
+lower the value to lower than 3, so the third term is $(x_1\land x_4)\land \bar{x_2}$
+Combining the term, the boolean function is:
+$$f=\bar{x_2}\land(x_3 \lor (x_1 \land x_4)) \lor (x_3 \land (x_1 \lor x_4))$$
+
+2.2 The question ask for boolean function which threshold is larger or equal
+to 10. However, when we evaluate the maximum of the TLU, which
+we assign value 1 to all positive values and assign value 0 to all negative
+values, we compute: $1.9\times 1 -2.5 \times 0 +5.2\times 1 +2.3\times 1-0.5 \times 0= 9.4 <10$.
+As the max value is also small than 10, any inputs of this TLU will output
+a boolean result of false, we can directly state that the boolean function is
+$$f=\text{false}$$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Complete the assignment now
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
