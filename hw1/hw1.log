@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.9.7)  13 FEB 2026 16:15
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.9.7)  13 FEB 2026 22:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/lambo/HKUST/COMP3211/hw/hw1/hw1
-(c:/Users/lambo/HKUST/COMP3211/hw/hw1/hw1.tex
+**hw1
+(./hw1.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
 (c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -1011,32 +1011,32 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 ) (c:/texlive/2025/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 29.
+Package hyperref Info: Option `colorlinks' set `true' on input line 30.
 \c@Problem=\count367
 \c@case=\count368
  (./hw1.aux)
 \openout1 = `hw1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1073,21 +1073,21 @@ LaTeX Font Info:    ... okay on input line 135.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  TU/TeXGyreTermesMath(1)/m/n --> TU/lmr/m/n on input line 135.
+(Font)                  TU/TeXGyreTermesMath(1)/m/n --> TU/lmr/m/n on input line 136.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 135.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 136.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 135.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 136.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 135.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 136.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 135.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 136.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 135.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 136.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 135.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 136.
 \c@lstlisting=\count369
-Package hyperref Info: Link coloring ON on input line 135.
+Package hyperref Info: Link coloring ON on input line 136.
 (./hw1.out) (./hw1.out)
 \@outlinefile=\write5
 \openout5 = `hw1.out'.
@@ -1100,26 +1100,26 @@ File: ../img/logo-hkust.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 179.
+(Font)              scaled to size 10.00107pt on input line 180.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(2)/m/n' will be
-(Font)              scaled to size 7.40077pt on input line 179.
+(Font)              scaled to size 7.40077pt on input line 180.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(2)/m/n' will be
-(Font)              scaled to size 5.50058pt on input line 179.
+(Font)              scaled to size 5.50058pt on input line 180.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 179.
+(Font)              scaled to size 9.99893pt on input line 180.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
-(Font)              scaled to size 7.3992pt on input line 179.
+(Font)              scaled to size 7.3992pt on input line 180.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
-(Font)              scaled to size 5.4994pt on input line 179.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 179.
+(Font)              scaled to size 5.4994pt on input line 180.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 180.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 179.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 180.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 186--207
+Underfull \hbox (badness 10000) in paragraph at lines 187--208
 
  []
 
@@ -1128,13 +1128,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--207
 File: ../img/logo-hkust.png Graphic file (type bmp)
 <../img/logo-hkust.png>
 [1]
+Underfull \hbox (badness 10000) in paragraph at lines 238--243
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--257
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 262.
+(c:/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 
 File: ../img/logo-hkust.png Graphic file (type bmp)
 <../img/logo-hkust.png>
 [2]
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 256.
- (c:/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+Underfull \hbox (badness 10000) in paragraph at lines 267--269
+
+ []
+
+(c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 
 File: ../img/logo-hkust.png Graphic file (type bmp)
@@ -1150,12 +1166,12 @@ Package rerunfilecheck Info: File `hw1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30348 strings out of 468441
- 589004 string characters out of 5449221
- 1136838 words of memory out of 5000000
- 58294 multiletter control sequences out of 15000+600000
- 633066 words of font info for 74 fonts, out of 8000000 for 9000
+ 30519 strings out of 468441
+ 591058 string characters out of 5449221
+ 1322050 words of memory out of 5000000
+ 58455 multiletter control sequences out of 15000+600000
+ 633098 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 104i,12n,109p,573b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,12n,109p,536b,1187s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on hw1.pdf (4 pages).

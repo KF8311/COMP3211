@@ -21,6 +21,7 @@
 \usepackage{shadethm}
 \usepackage{hyperref}
 \usepackage{setspace}
+\usepackage{listings}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -205,7 +206,7 @@ follow the rectangle outer boundary located in the middle of the map,
 they should perform east, west, south or north respectively,
 so the local sensors cannot distinguish these positions. \\
 
-1.2 We cannot "compute" $s_7$ out. Normally,
+1.2 Sometimes we can or cannot "compute" $s_7$ out. Normally,
 with memory we can set $w_7  = 1$ iff in the previous step $w_8=1$
 and the robot move north previously. We have the design
 \begin{flalign*}
@@ -234,9 +235,14 @@ The $w_7$ we are predicting are only used for tracking the outer boundary,
 so that when we reach the southwest corner we will go north, which does
 not computer $s_7$ in any situations.
 
-\newpage
+However for some occasions we can compute $s_7$ out. For example, when previous
+step is recored as moving north, and $w_8$ is recored as 1 previously, which means we
+are moving one step north now, we can predict and compute out that $s_7=1$ since
+we have passed it previously.
+\\
+
 \begingroup\huge{\textbf{Question 2}}
-\endgroup \\
+\endgroup \\\\
 2.1. Consider all possible cases:
 We notices that when $x_3$ is 1 as long as $x_2$ is 0 then
 the TLU will reach a value of 3 or above regardless of other input,
@@ -257,6 +263,42 @@ values, we compute: $1.9\times 1 -2.5 \times 0 +5.2\times 1 +2.3\times 1-0.5 \ti
 As the max value is also small than 10, any inputs of this TLU will output
 a boolean result of false, we can directly state that the boolean function is
 $$f=\text{false}$$
+\newpage
+\begingroup\huge{\textbf{Question 3}}
+\endgroup \\
+
+3.1 My fitness function is designed as accuracy of the prediction,
+calculated by $$\frac{\# \text{numbers of correct predictions}}
+    {\# \text{total number of predictions performed}}$$
+
+3.2 My crossover function will iterate through every weights of the program,
+and randomly select it from one of its parents to form a new program.
+If the program predict correctly it will be awarded 1 point and 0 otherwise.
+Finally, np mean function is used to find its accuracy.
+
+3.3 My copy operator is runned by breaking the programs up to 10 groups
+from all programs, those groups are sent into tournament selection, and the best 10 programs, which are winners, will be selected
+
+3.4 The mutator function usage is kept minimal and applies it to only 1 equation,
+a randomly selected weight of the program will be randomised
+
+3.5 1000 programs are initialised initially, all programs' prarmeters are assigned
+values between -1 to 1 in float numbers, generated uniformly, this is achieved by numpy function.
+
+3.6 The stopage of evolution is determined by a fixed iterator, this iterator is fine tuned few times
+during local test and finally it is fixed in 100 epoches.
+
+3.7 The output is as follows:
+\begin{lstlisting}[language=Python]
+Prediction of parameters:  [-0.30942699 -0.25004898 -0.92231307  0.65589858  0.48219909 -0.47080655 0.66577782 -0.24509463  0.14474253]
+Accuracy:  0.95
+\end{lstlisting}
+This set achieved a 95\% accuracy against the training set.
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Complete the assignment now
 \end{document}
